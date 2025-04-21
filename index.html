@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joel Varghese | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-white text-black font-sans">
+
+<nav class="bg-gray-200 dark:bg-gray-800 p-4 fixed top-0 w-full z-50 flex justify-between">
+  <h1 class="text-2xl font-bold">Joel Varghese</h1>
+  <div>
+    <ul class="inline-flex space-x-4">
+      <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
+      <li><a href="#about" class="hover:text-yellow-500">About</a></li>
+      <li><a href="#education" class="hover:text-yellow-500">Education</a></li>
+      <li><a href="#skills" class="hover:text-yellow-500">Skills</a></li>
+      <li><a href="#experience" class="hover:text-yellow-500">Experience</a></li>
+      <li><a href="#projects" class="hover:text-yellow-500">Projects</a></li>
+      <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
+    </ul>
+    <button onclick="toggleTheme()" class="ml-4 text-yellow-400">🌓</button>
+  </div>
+</nav>
+
+<section id="home" class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900" data-aos="fade-up">
+  <div class="text-center">
+    <h2 class="text-4xl font-bold mb-4">Hey, I'm Joel 👋</h2>
+    <p class="text-xl">Engineer | Photographer | Developer | Video Editor</p>
+    <button onclick="toggleContactInfo()" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300 mt-4">Contact Info</button>
+    <div id="contact-info" class="hidden mt-4">
+      <p>Phone: 7977500655</p>
+      <p>Email: <a href="mailto:joelvarghese013@gmail.com" class="text-yellow-500">joelvarghese013@gmail.com</a></p>
+      <p>Location: Malad (E), Mumbai</p>
+      <a href="https://github.com/JoelVarghese13" target="_blank" class="text-yellow-500 mr-4">GitHub</a>
+      <a href="https://www.linkedin.com/in/joel-varghese-1b825b335/" target="_blank" class="text-yellow-500">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-20 px-6 bg-gray-200 dark:bg-gray-800" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p class="text-lg mb-4">I am a great leader and creative person who loves photography, tech, and travel. Strong communication skills, a good listener, and an eager learner with a passion for solving problems.</p>
+  </div>
+</section>
+
+<section id="education" class="py-20 px-6 bg-gray-100 dark:bg-gray-700" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Education</h2>
+    <ul class="list-disc list-inside">
+      <li>St. George High School (2022) - 90.80%</li>
+      <li>Don Bosco Jr College (2024) - 80%</li>
+      <li>FRCRCE First Year CGPA – 8.5</li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills" class="py-20 px-6 bg-gray-200 dark:bg-gray-800" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Skills</h2>
+    <ul class="list-disc list-inside">
+      <li>Programming: C, C++, Python, HTML, CSS, JavaScript, OBD II</li>
+      <li>Video Editing: Canva, DaVinci Resolve, Filmora</li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience" class="py-20 px-6 bg-gray-100 dark:bg-gray-700" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Experience</h2>
+    <ul class="list-disc list-inside">
+      <li>Event volunteering & organizing</li>
+      <li>Two-wheeler mechanic (hands-on repair)</li>
+      <li>Customer service & garage finance management (Joel Auto)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="py-20 px-6" data-aos="zoom-in">
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded">
+      <h3 class="text-xl font-semibold">🐍 Snake Game</h3>
+      <p>Simple JavaScript game</p>
+      <a href="https://github.com/JoelVarghese13/snake-game" class="text-yellow-500">Play</a>
+    </div>
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded">
+      <h3 class="text-xl font-semibold">🎬 Video Edits</h3>
+      <p>DaVinci Resolve projects</p>
+      <a href="#" onclick="openModal('video1')" class="text-yellow-500">Watch</a>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="video1" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
+  <div class="bg-white p-6 rounded-lg text-black relative max-w-xl w-full">
+    <button onclick="closeModal('video1')" class="absolute top-2 right-2">✖</button>
+    <h3 class="text-2xl mb-4">Video Project</h3>
+    <iframe class="w-full rounded" height="315" src="https://drive.google.com/file/d/1dl-03fZV5dM4_ckEVUsXhAMYguFCb4rv/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+<section id="contact" class="py-20 px-6 bg-gray-200 dark:bg-gray-800">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+    <form id="contactForm" class="space-y-4">
+      <input type="text" name="user_name" placeholder="Your Name" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required>
+      <input type="email" name="user_email" placeholder="Your Email" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required>
+      <input type="text" name="subject" placeholder="Subject" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required>
+      <textarea name="message" placeholder="Your Message" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required></textarea>
+      <button type="submit" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer class="text-center py-4 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
+  &copy; 2025 Joel Varghese
+  <button onclick="scrollToTop()" class="text-yellow-500 mt-4">↑ Back to top</button>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Apply saved theme on load
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark');
+  }
+
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.removeItem('theme');
+    }
+  }
+
+  function toggleContactInfo() {
+    const contactInfo = document.getElementById('contact-info');
+    contactInfo.classList.toggle('hidden');
+  }
+
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
