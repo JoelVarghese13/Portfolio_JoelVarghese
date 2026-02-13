@@ -105,17 +105,17 @@
   </div>
 </div>
 
-<section id="contact" class="py-20 px-6 bg-gray-200 dark:bg-gray-800">
-  <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-    <form id="contactForm" class="space-y-4">
-      <input type="text" name="user_name" placeholder="Your Name" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required>
-      <input type="email" name="user_email" placeholder="Your Email" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required>
-      <input type="text" name="subject" placeholder="Subject" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required>
-      <textarea name="message" placeholder="Your Message" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required></textarea>
-      <button type="submit" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300">Send</button>
-    </form>
-  </div>
+<section id="contact" class="py-20 px-6 bg-gray-200 dark:bg-gray-800" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+        <form id="contactForm" action="https://formspree.io/f/xojnendp" method="POST" class="space-y-4">
+            <input type="text" name="name" placeholder="Your Name" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required>
+            <input type="email" name="email" placeholder="Your Email" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required>
+            <input type="text" name="subject" placeholder="Subject" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" required>
+            <textarea name="message" placeholder="Your Message" class="w-full p-2 rounded bg-gray-100 dark:bg-gray-900" rows="5" required></textarea>
+            <button type="submit" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300">Send</button>
+        </form>
+    </div>
 </section>
 
 <footer class="text-center py-4 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
